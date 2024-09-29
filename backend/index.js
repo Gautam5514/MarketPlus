@@ -2,7 +2,8 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();  // Ensure .env is loaded before using any environment variables
 const connectDB = require('./DB/dbConfig');  // Require the database config
-const SignIN = require('./model/user.Model')
+const SignIN = require('./model/user.Model');
+const bcrypt = require('bcrypt');
 
 const app = express();
 
@@ -13,15 +14,19 @@ app.use(cors());
 // Connect to the database
 connectDB();
 
-app.get('/',async(req,res)=>{
-    const users = new SignIN ({
-        name:"sagar kumar",
-        email:"sagar@gmail.com",
-        password:"0000"
-    })
-    await users.save();
 
+app.post('/',async(req,res)=>{
+    const {sign} = req.body;
+    bcrypt.hash("dskjckjdscn", 10 )
+    
+    const user = new SignIN ({
+        name: sign.name,
+        email: sign.email,
+        password: bcrypt
+    });
+    await user.save();
 })
+
 app.get("/show", async (req, res) => {
     const show = await SignIN.find();
     res.send(show);
