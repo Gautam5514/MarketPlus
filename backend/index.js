@@ -14,16 +14,10 @@ app.use(cors());
 // Connect to the database
 connectDB();
 
-
 app.post('/',async(req,res)=>{
     const {sign} = req.body;
-    bcrypt.hash("dskjckjdscn", 10 )
-    
-    const user = new SignIN ({
-        name: sign.name,
-        email: sign.email,
-        password: bcrypt
-    });
+
+    const user = new SignIN (sign);
     await user.save();
 })
 
