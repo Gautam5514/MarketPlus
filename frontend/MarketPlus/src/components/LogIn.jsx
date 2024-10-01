@@ -1,6 +1,7 @@
 import "../App.css";
 import { useState } from "react";
 import axios from "axios";
+import {Link} from 'react-router-dom'
 
 const Login = () => {
     const [login, setLogin] = useState({
@@ -92,9 +93,9 @@ const Login = () => {
 
                 {/* Link to login */}
                 <p className="text-center mt-3 mb-2">Do not Have an Account</p>
-                <button className="btn w-100 btn-light rounded-0">
+                <Link to={'/'} className="btn w-100 btn-light rounded-0">
                     SignIN
-                </button>
+                </Link>
             </div>
         </div>
     );

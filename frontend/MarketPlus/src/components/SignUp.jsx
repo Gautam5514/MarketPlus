@@ -1,6 +1,7 @@
 import "../App.css";
 import { useState } from "react";
 import axios from "axios";
+import {Link} from 'react-router-dom'
 
 const Signup = () => {
     const [sign, setSign] = useState({
@@ -32,7 +33,7 @@ const Signup = () => {
 
         try {
             // Send the signup data to the server
-            await axios.post("http://localhost:3000/", {sign});
+            await axios.post("http://localhost:3000/signin", {sign});
             alert("Signup successful!");
         } catch (error) {
             console.error("Error during signup:", error);
@@ -108,9 +109,9 @@ const Signup = () => {
 
                 {/* Link to login */}
                 <p className="text-center mt-3 mb-2">Already have an account?</p>
-                <button className="btn w-100 btn-light rounded-0">
+                <Link to={'/login'} className="btn w-100 btn-light rounded-0">
                     Log In
-                </button>
+                </Link>
             </div>
         </div>
     );

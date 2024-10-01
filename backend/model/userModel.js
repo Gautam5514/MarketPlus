@@ -15,7 +15,7 @@ const newSchema = new mongoose.Schema({
     } ,
 });
   //model(create collection)
-    const SignIN = mongoose.model('SignIN', newSchema);
+    const SignIN = mongoose.model('signin', newSchema);
 
     module.exports = SignIN;
 
