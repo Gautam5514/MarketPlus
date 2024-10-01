@@ -1,7 +1,7 @@
 import "../App.css";
 import { useState } from "react";
 import axios from "axios";
-import {Link} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
 
 const Login = () => {
     const [login, setLogin] = useState({
@@ -9,7 +9,7 @@ const Login = () => {
         email: "",
         password: "",
     });
-
+const navigate = useNavigate()
     // Handle input changes for the signup form
     const handleSignup = (e) => {
         const { name, value } = e.target;
@@ -33,6 +33,9 @@ const Login = () => {
         await axios.post("http://localhost:3000/login",{login})
         .then(result=>{
             console.log(result)
+            if (result.data == "success"){
+                  navigate('/home')
+            }
         })
         .catch(e=>{
             console.log(e)
