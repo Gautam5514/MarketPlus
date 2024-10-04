@@ -16,43 +16,55 @@ app.use(cors());
 connectDB();
 
 app.post("/signin", async (req, res) => {
-    const { sign } = req.body;
-    bcrypt.hash(sign.password, 10)
-        .then(hash => {
-            const user = new SignIN({
-                name: sign.name,
-                email: sign.email,
-                password: hash
-            });
-            user.save();
-            console.log(user)
+    console.log(req.body);  // Log the body to debug
+    const { name, email, password } = req.body;  // Destructure directly
 
-        })
-        .catch(e => {
-            console.log(e)
-        })
+    try {
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const user = new SignIN({
+            name,
+            email,
+            password: hashedPassword,
+        });
 
-
-
+        await user.save();
+        console.log("User saved:", user);
+        res.status(201).json({ message: "User created successfully!" });
+    } catch (error) {
+        console.error("Signup Error:", error);
+        res.status(500).json({ message: "Error during signup" });
+    }
 });
 
+
+
+
+
 app.post("/login", (req, res) => {
-    const { login } = req.body;
-    SignIN.findOne({ email: login.email })
+    console.log(req.body); // Log the body to debug
+    const { email, password } = req.body; // Destructure directly from req.body
+
+    SignIN.findOne({ email })
         .then(user => {
             if (user) {
-                bcrypt.compare(login.password, user.password, (err, response) => {
+                bcrypt.compare(password, user.password, (err, response) => {
                     if (response) {
                         res.json("success");
                     } else {
                         res.json("Password doesn't match");
                     }
-                })
+                });
             } else {
-                res.json("user doesn't exist")
+                res.json("User doesn't exist");
             }
+        })
+        .catch(error => {
+            console.error("Login Error:", error);
+            res.status(500).json({ message: "Error during login" });
         });
 });
+
+
 
 // Start the server
 const port = process.env.PORT || 5000;

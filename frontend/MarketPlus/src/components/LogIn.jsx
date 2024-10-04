@@ -30,12 +30,16 @@ const navigate = useNavigate()
             email: "",
             password: "",
         });
-        await axios.post("http://localhost:3000/login",{login})
+        await axios.post("http://localhost:3000/login", login) // sending login directly
+
+
         .then(result=>{
             console.log(result)
-            if (result.data == "success"){
-                  navigate('/home')
-            }
+            if (result.data === "success") {
+                navigate('/home');
+            } else {
+                alert("Login failed.");
+            }            
         })
         .catch(e=>{
             console.log(e)

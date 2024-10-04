@@ -1,7 +1,8 @@
+
 import "../App.css";
 import { useState } from "react";
 import axios from "axios";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 const Signup = () => {
     const [sign, setSign] = useState({
@@ -18,7 +19,7 @@ const Signup = () => {
             [name]: value,
         }));
     };
-
+    const navigate = useNavigate()
     // Handle form submission
     const onClickHandle = async (e) => {
         e.preventDefault();
@@ -30,11 +31,12 @@ const Signup = () => {
             email: "",
             password: "",
         });
-
+        
         try {
             // Send the signup data to the server
-            await axios.post("http://localhost:3000/signin", {sign});
+            await axios.post("http://localhost:3000/signin", sign); // send sign directly
             alert("Signup successful!");
+            navigate("/login");
         } catch (error) {
             console.error("Error during signup:", error);
             alert("Signup failed. Please try again.");
