@@ -3,6 +3,8 @@ import "../App.css";
 import { useState } from "react";
 import axios from "axios";
 import {Link, useNavigate} from 'react-router-dom'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
     const [sign, setSign] = useState({
@@ -34,8 +36,10 @@ const Signup = () => {
         
         try {
             // Send the signup data to the server
-            await axios.post("http://localhost:3000/signin", sign); // send sign directly
-            alert("Signup successful!");
+            await axios.post("http://localhost:3000/signin", sign) // send sign directly
+            .then((result) => {
+                toast.success("user Created Successfully");
+            });
             navigate("/login");
         } catch (error) {
             console.error("Error during signup:", error);

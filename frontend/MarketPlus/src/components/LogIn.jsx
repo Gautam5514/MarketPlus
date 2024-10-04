@@ -2,6 +2,8 @@ import "../App.css";
 import { useState } from "react";
 import axios from "axios";
 import {Link,useNavigate} from 'react-router-dom'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [login, setLogin] = useState({
@@ -35,7 +37,8 @@ const navigate = useNavigate()
 
         .then(result=>{
             console.log(result)
-            if (result.data === "success") {
+            if (result.data === "success") { 
+                    toast.success("Successfully");
                 navigate('/home');
             } else {
                 alert("Login failed.");
