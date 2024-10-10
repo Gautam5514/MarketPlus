@@ -54,7 +54,7 @@ const navigate = useNavigate()
 
     return (
         <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-            <div className="bg-white p-4 rounded w-25 shadow sagars">
+            <div className="bg-white p-4 rounded w-25 shadow sagars text-dark">
                 <h2 className="text-center mb-4">Login</h2>
                 <form>
 

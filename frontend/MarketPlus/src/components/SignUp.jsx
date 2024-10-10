@@ -27,12 +27,6 @@ const Signup = () => {
         e.preventDefault();
         console.log(sign);
 
-         // Reset form fields after submission
-        setSign({
-            name: "",
-            email: "",
-            password: "",
-        });
         
         try {
             // Send the signup data to the server
@@ -45,12 +39,19 @@ const Signup = () => {
             console.error("Error during signup:", error);
             alert("Signup failed. Please try again.");
         }
+        
+        // Reset form fields after submission
+        setSign({
+            name: "",
+            email: "",
+            password: "",
+        });
 
     };
 
     return (
         <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-            <div className="bg-white p-4 rounded w-25 shadow sagars">
+            <div className="bg-white p-4 rounded w-25 shadow sagars text-dark">
                 <h2 className="text-center mb-4">Signup</h2>
                 <form>
                     {/* Name input field */}
@@ -106,7 +107,7 @@ const Signup = () => {
 
                     {/* Signup button */}
                     <button
-                        className="btn btn-dark w-100 rounded-0"
+                        className="btn btn-dark w-100 rounded-1"
                         onClick={onClickHandle}
                     >
                         Sign Up
