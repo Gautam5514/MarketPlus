@@ -4,6 +4,7 @@ require("dotenv").config(); // Ensure .env is loaded before using any environmen
 const connectDB = require("./DB/dbConfig"); // Require the database config
 const SignIN = require('./model/userModel')
 const bcrypt = require("bcrypt");
+const jwt = require('jsonwebtoken')
 
 const app = express();
 
@@ -49,7 +50,10 @@ app.post("/login", (req, res) => {
             if (user) {
                 bcrypt.compare(password, user.password, (err, response) => {
                     if (response) {
-                        res.json("success");
+                       const token = jwt.sign({_id:user._id,email:user.email},process.env.SECRET_KEY,
+                        { expiresIn: '1000h' }
+                       )
+                       res.status(200).json({message:"Login Successful",token:token})
                     } else {
                         res.json("Password doesn't match");
                     }
