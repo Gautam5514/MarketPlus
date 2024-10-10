@@ -83,10 +83,11 @@
   
    
   
-  .auth button {
+  .auth a {
     border: none;
     border-radius: 50px;
     font-size: 12px;
+    text-decoration: none;
   }
   .auth .login {
     background-color: #fff;

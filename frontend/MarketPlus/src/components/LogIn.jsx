@@ -103,7 +103,7 @@ const navigate = useNavigate()
 
                 {/* Link to login */}
                 <p className="text-center mt-3 mb-2">Do not Have an Account</p>
-                <Link to={'/'} className="btn w-100 btn-light rounded-0">
+                <Link to={'/signup'} className="btn w-100 btn-light rounded-0">
                     SignIN
                 </Link>
             </div>

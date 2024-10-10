@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './LandingPage.css'
-function NavBar() {
+
+function Nav() {
     const [showToggle, setShowToggle] = useState(false);
     return (
         <>
@@ -30,8 +31,8 @@ function NavBar() {
                     onMouseLeave={() => setShowToggle(false)}
                 >
                     <div className="auth">
-                        <button className="login">LOG IN</button>
-                        <button className="signup">SIGN UP</button>
+                        <a href="/login"  className="login">LOG IN</a>
+                        <a href="/signup" className="signup">SIGN UP</a>
                     </div>
                 </div>
             </div>
@@ -39,4 +40,4 @@ function NavBar() {
     )
 }
 
-export default NavBar
+export default Nav

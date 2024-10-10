@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Accordion } from 'react-bootstrap';
 import 'animate.css';
+import Footer from './Footer';
 
 
 const Home = () => {
@@ -97,6 +98,7 @@ const Home = () => {
           </Accordion.Item>
         </Accordion>
       </div>
+      <Footer />
     </div>
   );
 };

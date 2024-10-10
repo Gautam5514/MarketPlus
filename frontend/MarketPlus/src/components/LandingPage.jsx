@@ -4,6 +4,10 @@ import { useState } from "react";
 
 import "./LandingPage.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Footer from "./Footer";
+import Offers from "./Offers";
+import Nav from "./Nav";
+
 // import required modules
 
 export default function LandingPage() {
@@ -23,7 +27,8 @@ export default function LandingPage() {
 
     return (
         <>
-
+        <Offers />
+        <Nav />
             <section style={divStyle}>
 
                 <div className="modal-container">
@@ -48,26 +53,7 @@ export default function LandingPage() {
                 </div>
 
             </section>
-            <footer>
-                <div className="footer-container">
-                    <div className="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms & Conditions</a>
-                        <a href="#">Return Policy</a>
-                        <a href="#">Contact Us</a>
-                    </div>
-
-                    <div className="social-icons">
-                        <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i className="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                    <div className="footer-copy">
-                        <p>&copy; 2024 Market +. All rights reserved.</p>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
 
         </>
     );
