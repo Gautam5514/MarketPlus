@@ -50,10 +50,22 @@ const Login = () => {
         console.log(e);
       });
   };
+  const divStyle = {
+    backgroundImage: `url('/images/home2.jpg')`,
+    height: "600px",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    position: "relative", // Add this line
+    display: "flex", // Add this line
+    justifyContent: "center", // Add this line
+    alignItems: "center", // Add this line
+};
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-      <div className="bg-white p-4 rounded w-25 shadow sagars text-dark">
+    <section style={divStyle}>
+    <div className="d-flex justify-content-center align-items-center vh-100">
+      <div className="bg-white p-4 rounded w-45 shadow sagars text-dark">
         <h2 className="text-center mb-4">Login</h2>
         <form>
           {/* Email input field */}
@@ -106,6 +118,7 @@ const Login = () => {
         </Link>
       </div>
     </div>
+    </section>
   );
 };
 

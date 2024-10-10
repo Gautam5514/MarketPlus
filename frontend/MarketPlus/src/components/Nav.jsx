@@ -13,7 +13,7 @@ function Nav() {
                     <a href="">ABOUT</a>
                 </div>
                 <div className="logo">
-                     <img src="./images/brandlogo.png" alt="" />
+                    <img src="./images/brandlogo.png" alt="" />
                 </div>
                 <div className="icon">
                     <i className="fa-solid fa-magnifying-glass"></i>

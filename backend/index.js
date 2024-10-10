@@ -50,10 +50,10 @@ app.post("/login", (req, res) => {
             if (user) {
                 bcrypt.compare(password, user.password, (err, response) => {
                     if (response) {
-                       const token = jwt.sign({_id:user._id,email:user.email},process.env.SECRET_KEY,
-                        { expiresIn: '1000h' }
-                       )
-                       res.status(200).json({message:"Login Successful",token:token})
+                        const token = jwt.sign({_id:user._id,email:user.email},process.env.SECRET_KEY,
+                        { expiresIn: '10d' }
+                        )
+                        res.status(200).json({message:"Login Successful",token:token})
                     } else {
                         res.json("Password doesn't match");
                     }

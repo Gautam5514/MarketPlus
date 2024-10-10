@@ -4,6 +4,8 @@ import { Accordion } from 'react-bootstrap';
 import 'animate.css';
 import Footer from './Footer';
 import { useNavigate } from "react-router-dom";
+import Offers from './Offers';
+import Nav from './Nav';
 
 
 const Home = () => {
@@ -16,6 +18,8 @@ const Home = () => {
 
   return (
     <div className="min-vh-100 bg-light">
+      <Offers />
+      <Nav />
       {/* Hero Section */}
       <div className="d-flex justify-content-center align-items-center bg-primary text-white py-5">
         <div className="text-center">
@@ -26,7 +30,7 @@ const Home = () => {
             Explore the best content, enhance your knowledge, and join a community of passionate learners.
           </p>
           <a href="#" onClick={logOut} className="btn btn-outline-light btn-lg shadow-sm animate__animated animate__bounceIn">
-            Get Started
+            Log Out
           </a>
         </div>
       </div>
