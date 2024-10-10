@@ -34,17 +34,15 @@
     opacity: 0.9;
   }
    
-  /* .logo img {
-    width: 100%;
-    position: relative;
-    right: 80px;
-    height: 230px;
-    object-fit: cover;
-    mix-blend-mode: darken;
-  } */
+  .logo img {
+     width: 65%;
+     height: 65px;
+     object-fit: contain;
+  } 
   .logo h2{
     color: black
   }
+
   .nav .icon i {
     color: black;
     font-size: 20px;
