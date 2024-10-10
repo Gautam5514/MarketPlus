@@ -32,7 +32,7 @@ const Signup = () => {
             // Send the signup data to the server
             await axios.post("http://localhost:3000/signin", sign) // send sign directly
             .then((result) => {
-                toast.success("user Created Successfully");
+                toast.success("User Created Successfully");
             });
             navigate("/login");
         } catch (error) {

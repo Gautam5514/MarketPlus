@@ -3,9 +3,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Accordion } from 'react-bootstrap';
 import 'animate.css';
 import Footer from './Footer';
+import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  function logOut (){
+    localStorage.removeItem("token")
+    navigate('/')
+  }
+
   return (
     <div className="min-vh-100 bg-light">
       {/* Hero Section */}
@@ -17,7 +25,7 @@ const Home = () => {
           <p className="lead mb-4 animate__animated animate__fadeInUp">
             Explore the best content, enhance your knowledge, and join a community of passionate learners.
           </p>
-          <a href="#" className="btn btn-outline-light btn-lg shadow-sm animate__animated animate__bounceIn">
+          <a href="#" onClick={logOut} className="btn btn-outline-light btn-lg shadow-sm animate__animated animate__bounceIn">
             Get Started
           </a>
         </div>
