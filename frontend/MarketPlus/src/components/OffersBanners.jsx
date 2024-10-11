@@ -26,17 +26,22 @@ export default function OffersBanners() {
       >
         <SwiperSlide className="slide">
           <img src="/images/offers5.webp" alt="" />
+          <div class="fade-bottom"></div>
         </SwiperSlide>
         <SwiperSlide className="slide">
           <img src="/images/offers6.webp" alt="" />
-        </SwiperSlide>
-        <SwiperSlide className="slide">
-          <img src="/images/offers2.webp" alt="" />
+          <div class="fade-bottom"></div>
         </SwiperSlide>
         <SwiperSlide className="slide">
           <img src="/images/offers3.webp" alt="" />
+          <div class="fade-bottom"></div>
+        </SwiperSlide>
+        <SwiperSlide className="slide">
+          <img src="/images/offers2.webp" alt="" />
+          <div class="fade-bottom"></div>
         </SwiperSlide>
       </Swiper>
+      
     </>
   );
 }

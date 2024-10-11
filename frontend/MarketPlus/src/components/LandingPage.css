@@ -155,9 +155,13 @@ footer {
 .product-card-section {
   padding: 30px 0;
   text-align: center;
-  background-color: #c1bfbf;
 }
-
+ .margin{
+  position: relative; 
+  margin-top: -120px;
+  z-index: 1;
+  
+ }
 .product-card-container {
   display: flex;
   justify-content: space-around;
@@ -166,11 +170,11 @@ footer {
 }
 
 .product-card {
-  width: 24%; /* Adjust size as needed */
-  padding: 4px;
-  background-color: rgb(253, 251, 251);
+  width: 23%; /* Adjust size as needed */
+  padding: 15px;
+  background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -185,18 +189,15 @@ footer {
 .product-card h4 {
   margin: 15px 0 10px;
   color: #141212;
-
 }
 
 .product-card-section {
   color: #141212;
-  
 }
 .product-card p {
   color: #141212;
   font-weight: bold;
 }
-
 
 /* Make the cards responsive */
 @media (max-width: 768px) {
@@ -212,7 +213,6 @@ footer {
     margin-bottom: 20px;
   }
 }
-
 
 .product-grid-section {
   padding: 20px;

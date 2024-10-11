@@ -52,7 +52,8 @@ const Login = () => {
   };
   const divStyle = {
     backgroundImage: `url('/images/home2.jpg')`,
-    height: "600px",
+    height: "100vh",
+    width: "100%",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
