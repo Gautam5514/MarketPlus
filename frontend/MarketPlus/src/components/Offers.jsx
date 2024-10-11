@@ -20,7 +20,7 @@ function Offers() {
                 }}
                 loop={true}
                 modules={[Navigation]}
-                className="mySwiper"
+                 
             >
                 <SwiperSlide>FREE SHIPPING OVER $75 USD & EASY RETURNS</SwiperSlide>
                 <SwiperSlide>UP TO 40% OFF | DEALS ON SMARTPHONES</SwiperSlide>
