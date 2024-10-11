@@ -217,6 +217,7 @@ footer {
 .product-grid-section {
   padding: 20px;
   text-align: center;
+  color: #141212;
 }
 
 .product-grid-container {
@@ -247,6 +248,7 @@ footer {
 
 .product-info h4 {
   margin: 10px 0;
+  color: #141212;
 }
 
 .product-info p {
