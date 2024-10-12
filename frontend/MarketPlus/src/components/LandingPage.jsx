@@ -4,6 +4,8 @@ import Footer from "./Footer";
 import Offers from "./Offers";
 import Nav from "./Nav";
 import OffersBanners from "./OffersBanners";
+import AddOffers from "./AddOffers";
+import Carousel from "./Carousel";
 
 export default function LandingPage() {
     return (
@@ -33,11 +35,10 @@ export default function LandingPage() {
                             <h4>Pharmacy</h4>
                         </div>
                     </div>
-                </section>
-            </div>
+                
 
             {/* Product Image Section */}
-            <section className="product-grid-section">
+            <div className="product-grid-section">
                 <h3 className="text-center">
                     <strong>Featured Products</strong>
                 </h3>
@@ -66,10 +67,10 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
             {/* Product Image Card Section */}
-            <section className="product-card-section">
+            <div className="product-card-section">
                 <h3 className="text-center">
                     <strong>Featured Products </strong>
                 </h3>
@@ -91,62 +92,16 @@ export default function LandingPage() {
                         <h4>Video Shooting</h4>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            {/* vegitable market */}
-            <section className="product-grid-section">
-                <h3 className="text-center">
-                    <strong>Featured Products</strong>
-                </h3>
-                <div className="product-grid-container">
-                    <div className="product-grid-item span-3-columns">
-                        <img
-                            src="/images/clothes.jpg"
-                            alt="Clothes"
-                            className="product-image"
-                        />
-                        <div className="product-info">
-                            <h4>Clothes</h4>
-                            <p>Explore our latest collection of clothes.</p>
-                        </div>
-                    </div>
-                    <div className="product-grid-item">
-                        <img
-                            src="/images/shoes.webp"
-                            alt="Shoes"
-                            className="product-image"
-                        />
-                        <div className="product-info">
-                            <h4>Shoes</h4>
-                            <p>Trendy and comfortable shoes for every occasion.</p>
-                        </div>
-                    </div>
-                    <div className="product-grid-item">
-                        <img
-                            src="/images/mobiles.jpg"
-                            alt="Mobile / Laptop"
-                            className="product-image"
-                        />
-                        <div className="product-info">
-                            <h4>Mobile / Laptop</h4>
-                            <p>Latest smartphones and laptops at unbeatable prices.</p>
-                        </div>
-                    </div>
-                    <div className="product product-grid-item ">
-                        <img
-                            src="/images/pharmacy.jpg"
-                            alt="Pharmacy"
-                            className="product-image"
-                        />
-                        <div className="product-info">
-                            <h4>Pharmacy</h4>
-                            <p>Essential healthcare products at your fingertips.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+            <Carousel />
+
+            <AddOffers />
 
             <Footer />
+            </section>
+            </div>
         </>
     );
 }
