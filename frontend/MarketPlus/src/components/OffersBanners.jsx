@@ -37,7 +37,7 @@ export default function OffersBanners() {
           <div className="fade-bottom"></div>
         </SwiperSlide>
         <SwiperSlide className="slide">
-          <img src="/images/offers2.webp" alt="" />
+          <img src="/images/offers6.webp" alt="" />
           <div className="fade-bottom"></div>
         </SwiperSlide>
       </Swiper>
