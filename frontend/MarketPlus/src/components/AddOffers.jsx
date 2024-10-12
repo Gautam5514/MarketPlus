@@ -2,13 +2,13 @@ import "./LandingPage.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function AddOffers() {
-  return (
+    return (
     <div>
-      <section className="product-grid-section">
+        <section className="product-grid-section">
                 <h3 className="text-center">
                     <strong>New Offers Product</strong>
                 </h3>
-                <div className="product-grid-container">
+                <div className="product-grid-container ">
                     <div className="product-grid-item ">
                         <img
                             src="/images/fresh1.jpg"
@@ -56,7 +56,7 @@ function AddOffers() {
                 </div>
             </section>
     </div>
-  )
+    ) 
 }
 
 export default AddOffers

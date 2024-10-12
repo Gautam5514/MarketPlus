@@ -37,3 +37,8 @@
 .swiper-button-prev:hover {
   color: white;
 }
+
+.size {
+  height: 100%;
+  width: 100%;
+}

@@ -7,6 +7,7 @@ import OffersBanners from "./OffersBanners";
 import AddOffers from "./AddOffers";
 import Carousel from "./Carousel";
 import ScrollAnimation from "./ScrollAnimation";
+import OfferLayout from "./OfferLayout";
 
 export default function LandingPage() {
     return (
@@ -99,9 +100,11 @@ export default function LandingPage() {
             <Carousel />
             <ScrollAnimation />
             <AddOffers />
+            <OfferLayout />
 
-            <Footer />
+            
             </section>
+            <Footer />
             </div>
         </>
     );

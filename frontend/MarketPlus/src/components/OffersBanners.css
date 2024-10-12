@@ -31,3 +31,18 @@
     rgb(255, 255, 255) 100% /* End fully opaque white */
   );
 }
+
+.product-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-info {
+  text-align: center;
+  padding: 10px;
+}
+
+.color {
+  background-color: white;
+}
