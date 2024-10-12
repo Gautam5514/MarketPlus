@@ -156,23 +156,25 @@ footer {
   padding: 30px 0;
   text-align: center;
 }
- .margin{
+.margin{
   position: relative; 
-  margin-top: -120px;
+  margin-top: -50px;
   z-index: 1;
+
   
- }
+}
 .product-card-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap; /* Ensures responsiveness */
   padding: 20px;
+  
 }
 
 .product-card {
   width: 23%; /* Adjust size as needed */
   padding: 15px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   
   text-align: center;
