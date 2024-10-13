@@ -1,0 +1,50 @@
+.cardcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 400px;
+  gap: 20px;
+  background-color: #dedddf;
+}
+.offercard {
+  width: 270px;
+  max-height: 350px;
+  background-color: white;
+}
+.offercard img {
+  width: 90%;
+  object-fit: contain;
+  margin: 10px;
+}
+
+.content {
+  margin: 0 10px 0 10px;
+  padding-bottom: 10px;
+}
+.off {
+  border: 1px solid red;
+  padding: 3px;
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+}
+.festoffer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.price {
+  font-size: 18px;
+}
+.priceoffer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.mrp {
+  text-decoration: line-through;
+}
