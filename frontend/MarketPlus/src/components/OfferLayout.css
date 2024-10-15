@@ -5,15 +5,18 @@
   align-items: center;
   margin-bottom: 30px;
   width: 100%;
-  height: 400px;
+  height: auto; /* Changed from fixed height to auto for better responsiveness */
   gap: 20px;
   background-color: #dedddf;
+  padding: 20px; /* Added padding for better spacing on smaller screens */
 }
+
 .offercard {
   width: 270px;
   max-height: 350px;
   background-color: white;
 }
+
 .offercard img {
   width: 90%;
   object-fit: contain;
@@ -24,6 +27,7 @@
   margin: 0 10px 0 10px;
   padding-bottom: 10px;
 }
+
 .off {
   border: 1px solid red;
   padding: 3px;
@@ -31,6 +35,7 @@
   color: white;
   border-radius: 3px;
 }
+
 .festoffer {
   display: flex;
   align-items: center;
@@ -40,11 +45,51 @@
 .price {
   font-size: 18px;
 }
+
 .priceoffer {
   display: flex;
   align-items: center;
   gap: 5px;
 }
+
 .mrp {
   text-decoration: line-through;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .offercard {
+    width: 220px; /* Adjust card width for medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cardcontainer {
+    justify-content: space-around; /* Spread the cards on smaller screens */
+    padding: 10px;
+  }
+
+  .offercard {
+    width: 180px; /* Further reduce card width for small screens */
+  }
+
+  .price {
+    font-size: 16px; /* Adjust font size for small screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardcontainer {
+    flex-direction: column; /* Stack cards vertically on very small screens */
+    align-items: center;
+  }
+
+  .offercard {
+    width: 100%; /* Make the card take full width */
+    max-width: 300px; /* Limit the max width */
+  }
+
+  .price {
+    font-size: 14px; /* Further reduce font size for very small screens */
+  }
 }
