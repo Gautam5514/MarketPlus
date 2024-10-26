@@ -1,5 +1,6 @@
 import "./LandingPage.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { Link } from "react-router-dom"
 
 function Footer() {
     return (
@@ -7,10 +8,10 @@ function Footer() {
             <footer>
                 <div className="footer-container">
                     <div className="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms & Conditions</a>
-                        <a href="#">Return Policy</a>
-                        <a href="#">Contact Us</a>
+                        <Link to="/privacy-policy">Privacy Policy</Link>
+                        <Link to="/term-condition">Terms & Conditions</Link>
+                        <Link to="/return-policy">Return Policy</Link>
+                        <Link to="/contact-us">Contact Us</Link>
                     </div>
 
                     <div className="social-icons">

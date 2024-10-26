@@ -6,6 +6,10 @@ import Login from './components/LogIn'
 import LandingPage from './components/LandingPage'
 import { ToastContainer } from 'react-toastify';
 import ProtectRoute from './components/protectRoute'
+import PrivacyPolicy  from './components/PrivacyPolicy'
+import TermCondition from './components/TermCondition'
+import ReturnPolicy from './components/ReturnPolicy'
+import ContactUs from './components/ContactUs'
 
 function App() {
   const router = createBrowserRouter([
@@ -31,6 +35,22 @@ function App() {
         }
       ]
     },
+    {
+      path: '/privacy-policy',
+      element: <PrivacyPolicy/>,
+    },
+    {
+      path: '/term-condition',
+      element: <TermCondition/>
+    },
+    {
+      path: '/return-policy',
+      element: <ReturnPolicy />
+    },
+    {
+      path: '/contact-us',
+      element: <ContactUs/>
+    }
 
   ])
 
