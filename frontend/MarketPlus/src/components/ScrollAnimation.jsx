@@ -17,7 +17,7 @@ const ScrollAnimation = () => {
   return (
     <>
       <div className="card-container">
-        <h1>Delivery Offers</h1>
+        <h1 className="text-dark">Delivery Offers</h1>
         <div className="cards" data-aos="fade-right">
           <img
             src="https://i.pinimg.com/1200x/fa/59/3e/fa593e77a0e4e9e2d78c36bbc10e020f.jpg"
@@ -28,5 +28,6 @@ const ScrollAnimation = () => {
     </>
   );
 };
+
 
 export default ScrollAnimation;

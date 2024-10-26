@@ -9,9 +9,9 @@ const OfferLayout = () => {
         { id: 3, description: 'Women Pure Banarasi Saree', price: 1299, discount: 40, offer: 'Great Indian Festival', image: './images/saree.jpg' },
         { id: 4, description: 'Women Cotton Blend Kurta', price: 1599, discount: 10, offer: 'Great Indian Festival', image: './images/suit.jpg' },
         { id: 5, description: 'Men Cotton Rich Polo T Shirt', price: 1099, discount: 50, offer: 'Great Indian Festival', image: './images/tshirt.jpg' },
-        { id: 5, description: 'Men Cotton Rich Polo T Shirt', price: 1099, discount: 50, offer: 'Great Indian Festival', image: './images/tshirt.jpg' },
-        { id: 5, description: 'Men Cotton Rich Polo T Shirt', price: 1099, discount: 50, offer: 'Great Indian Festival', image: './images/tshirt.jpg' },
-        { id: 5, description: 'Men Cotton Rich Polo T Shirt', price: 1099, discount: 50, offer: 'Great Indian Festival', image: './images/tshirt.jpg' },
+        { id: 6, description: 'Men Cotton Rich Polo T Shirt', price: 1099, discount: 50, offer: 'Great Indian Festival', image: './images/tshirt.jpg' },
+        { id: 7, description: 'Men Cotton Rich Polo T Shirt', price: 1099, discount: 50, offer: 'Great Indian Festival', image: './images/tshirt.jpg' },
+        { id: 8, description: 'Men Cotton Rich Polo T Shirt', price: 1099, discount: 50, offer: 'Great Indian Festival', image: './images/tshirt.jpg' },
 
     ]);
 
