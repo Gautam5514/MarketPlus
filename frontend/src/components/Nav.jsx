@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './LandingPage.css'
+import { Link } from "react-router-dom";
 
 function Nav() {
     const [showToggle, setShowToggle] = useState(false);
@@ -7,10 +8,10 @@ function Nav() {
         <>
             <div className="nav">
                 <div className="navmenu">
-                    <a href="">HOME</a>
-                    <a href="">SHOP</a>
-                    <a href="">CONTACT</a>
-                    <a href="">ABOUT</a>
+                    <Link href="">HOME</Link>
+                    <Link href="">SHOP</Link>
+                    <Link href="">CONTACT</Link>
+                    <Link href="">ABOUT</Link>
                 </div>
                 <div className="logo">
                     <img src="./images/brandlogo.png" alt="" />
@@ -30,8 +31,8 @@ function Nav() {
                     onMouseLeave={() => setShowToggle(false)}
                 >
                     <div className="auth">
-                        <a href="/login"  className="login">LOG IN</a>
-                        <a href="/signup" className="signup">SIGN UP</a>
+                        <Link href="/login"  className="login">LOG IN</Link>
+                        <Link href="/signup" className="signup">SIGN UP</Link>
                     </div>
                 </div>
             </div>
