@@ -29,7 +29,7 @@ const Signup = () => {
     try {
       // Send the signup data to the server
       await axios
-        .post("http://localhost:3000/signin", sign) // send sign directly
+        .post("https://marketplus.onrender.com/signin", sign) // send sign directly
         .then((result) => {
           toast.success("User Created Successfully");
         });

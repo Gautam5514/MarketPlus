@@ -33,7 +33,7 @@ const Login = () => {
       password: "",
     });
     await axios
-      .post("http://localhost:3000/login", login) // sending login directly
+      .post("https://marketplus.onrender.com/login", login) // sending login directly
 
       .then((result) => {
         console.log(result);
@@ -41,7 +41,7 @@ const Login = () => {
         if (token) {
           localStorage.setItem("token", token);
           toast.success("Login Successful");
-          navigate("/home");
+          navigate("/");
         } else {
           alert("Can't login successful");
         }
