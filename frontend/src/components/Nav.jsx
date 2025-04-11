@@ -8,10 +8,10 @@ function Nav() {
         <>
             <div className="nav">
                 <div className="navmenu">
-                    <Link href="">HOME</Link>
-                    <Link href="">SHOP</Link>
-                    <Link href="">CONTACT</Link>
-                    <Link href="">ABOUT</Link>
+                    <Link to="">HOME</Link>
+                    <Link to="">SHOP</Link>
+                    <Link to="">CONTACT</Link>
+                    <Link to="">ABOUT</Link>
                 </div>
                 <div className="logo">
                     <img src="./images/brandlogo.png" alt="" />
@@ -31,8 +31,8 @@ function Nav() {
                     onMouseLeave={() => setShowToggle(false)}
                 >
                     <div className="auth">
-                        <Link href="/login"  className="login">LOG IN</Link>
-                        <Link href="/signup" className="signup">SIGN UP</Link>
+                        <Link to="/login"  className="login">LOG IN</Link>
+                        <Link to="/signup" className="signup">SIGN UP</Link>
                     </div>
                 </div>
             </div>
