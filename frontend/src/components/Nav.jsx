@@ -1,9 +1,13 @@
 import { useState } from "react";
 import './LandingPage.css'
 import { Link } from "react-router-dom";
+import { useCart } from '../contexts/CartContext';
+import Cart from './Cart';
 
 function Nav() {
     const [showToggle, setShowToggle] = useState(false);
+    const [showCart, setShowCart] = useState(false);
+    const { getCartItemCount } = useCart();
     return (
         <>
             <div className="nav">
@@ -23,7 +27,35 @@ function Nav() {
                         onMouseEnter={() => setShowToggle(true)}
                         onMouseLeave={() => setShowToggle(false)}
                     ></i>
-                    <i className="fa-solid fa-bag-shopping"></i>
+                    <div className="cart-icon-container" style={{ position: 'relative', display: 'inline-block' }}>
+                        <i 
+                            className="fa-solid fa-bag-shopping"
+                            style={{ cursor: 'pointer' }}
+                            onClick={() => setShowCart(true)}
+                        ></i>
+                        {getCartItemCount() > 0 && (
+                            <span 
+                                className="cart-count"
+                                style={{
+                                    position: 'absolute',
+                                    top: '-8px',
+                                    right: '-8px',
+                                    backgroundColor: '#dc3545',
+                                    color: 'white',
+                                    borderRadius: '50%',
+                                    width: '18px',
+                                    height: '18px',
+                                    fontSize: '10px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    fontWeight: 'bold'
+                                }}
+                            >
+                                {getCartItemCount()}
+                            </span>
+                        )}
+                    </div>
                 </div>
                 <div
                     className={`toggle ${showToggle ? 'show' : ''}`}
@@ -35,6 +67,7 @@ function Nav() {
                         <Link to="/signup" className="signup">SIGN UP</Link>
                     </div>
                 </div>
+                <Cart isOpen={showCart} onClose={() => setShowCart(false)} />
             </div>
         </>
     )

@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./OfferLayout.css"
+import { useCart } from '../contexts/CartContext';
+import { toast } from 'react-toastify';
 
 const OfferLayout = () => {
+    const { addToCart } = useCart();
     const [offers] = useState([
         { id: 1, description: 'Apple iPhone 13 Starlight', price: 19990, discount: 30, offer: 'Great Indian Festival', image: './images/iphon.jpg' },
         { id: 2, description: 'Lymio Track Pant for Men ', price: 999, discount: 20, offer: 'Great Indian Festival', image: './images/pant.jpg' },
@@ -14,6 +17,18 @@ const OfferLayout = () => {
         { id: 8, description: 'Men Cotton Rich Polo T Shirt', price: 1099, discount: 50, offer: 'Great Indian Festival', image: './images/tshirt.jpg' },
 
     ]);
+
+    const handleAddToCart = (offer) => {
+        addToCart(offer);
+        toast.success(`${offer.description} added to cart!`, {
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+        });
+    };
 
     return (
         <div className=" " style={{ backgroundColor: '#FFFFFF' }}>
@@ -34,6 +49,13 @@ const OfferLayout = () => {
                                     <p className="cardtext text-dark mb-1"> M.R.P: <span className='mrp'>&#8377;{offer.price}</span> </p>
                                 </div>
                                 <p className="cardtext text-dark mb-0 ">{offer.description}</p>
+                                <button 
+                                    className="btn btn-primary btn-sm mt-2 w-100"
+                                    onClick={() => handleAddToCart(offer)}
+                                >
+                                    <i className="fa-solid fa-cart-plus me-2"></i>
+                                    Add to Cart
+                                </button>
                             </div>
                         </div>
                     </div>

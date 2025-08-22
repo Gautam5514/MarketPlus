@@ -10,6 +10,7 @@ import PrivacyPolicy  from './components/PrivacyPolicy'
 import TermCondition from './components/TermCondition'
 import ReturnPolicy from './components/ReturnPolicy'
 import ContactUs from './components/ContactUs'
+import { CartProvider } from './contexts/CartContext'
 
 function App() {
   const router = createBrowserRouter([
@@ -56,12 +57,14 @@ function App() {
 
   return (
     <>
-      <div>
+      <CartProvider>
+        <div>
 
-      <RouterProvider router={router}/>
-      
-      <ToastContainer />
-      </div>
+        <RouterProvider router={router}/>
+        
+        <ToastContainer />
+        </div>
+      </CartProvider>
     </>
   )
 }
